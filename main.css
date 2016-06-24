@@ -1,0 +1,69 @@
+/* General */ 
+img.body-image {
+	width: 50%;
+	height: 50%;
+}
+
+/* Carousel */ 
+#topcarousel {
+	background-color: black; 
+}
+
+.overlay { 
+	position: absolute;
+	top: 50%;
+	z-index: 14; 
+	color: white;
+  	text-shadow: 0 1px 2px rgba(1, 1, 1, .6);
+  	left: 15%;
+  	right: 15%;
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.overlay > h1 {
+	font-size: 8vw; 
+}	
+@media (min-width: 768px) {
+	.overlay > h1 { 
+		font-size: 7vw; 
+	}
+}
+@media (min-width: 992px) {
+	.overlay > h1 { 
+		font-size: 7vw; 
+	}
+}
+@media (min-width: 1200px) {
+	.overlay > h1 { 
+		font-size: 8vw; 
+	}
+}
+
+.carousel-inner {
+	opacity: 0.5; 
+}
+
+/* Info */ 
+#info row p {
+	text-align: center;
+}
+
+/* == Materials Page == */ 
+.jumbotron {
+	background-image: url('./assets/images/materials.jpg');
+	background-size: cover;
+	opacity: 0.5; 
+	background-color: black;
+}
+
+.jumbotron-head {
+	top: 50px;
+	bottom: 0;
+	height: 100%;
+	position: absolute;
+	color: white;
+  	text-shadow: 0 1px 2px rgba(1, 1, 1, .6);
+}
