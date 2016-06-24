@@ -7,11 +7,13 @@ script.
 script.
   $(function() {
   $('#header').load('header.html');
-  $('#navbar').load('navbar.html');
+  $('#navbar').load('navbar.html', '', function() { 
+    $('.nav li#navregister').addClass('active') 
+  });
   $('#footer').load('footer.html');
   });
 
-title ABC TITLE 
+title Register
 // changem e
 
 #header
@@ -19,12 +21,13 @@ title ABC TITLE
 
 div
   h1.jumbotron &nbsp;
-  h1.jumbotron-head.container Past Years
+  h1.jumbotron-head.container Register
 
 .container#id
   h1.text-center.well
-    span.glyphicon.glyphicon-knight
-    | &nbsp;Title 1
+    span.glyphicon.glyphicon-edit
+    | &nbsp;Registration 
+  h3 Registration isn't open yet, but join our mailing list for updates!
 br
 h1.text-center
   span.glyphicon.glyphicon-chevron-left
@@ -32,10 +35,8 @@ h1.text-center
 br 
 br
 
-.container#id2
-  h1.text-center.well
-    span.glyphicon.glyphicon-pawn
-    | &nbsp;Title 2
+.container.text-center
+  iframe(src='https://docs.google.com/forms/d/1pAnyqFfRYyzECg_6py3JoPwTiPM6Dh8biyEdxLW5Dpw/viewform?embedded=true', width='760', height='500', frameborder='0', marginheight='0', marginwidth='0') Loading...
 br
 h1.text-center
   span.glyphicon.glyphicon-stop

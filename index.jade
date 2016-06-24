@@ -7,7 +7,9 @@ script.
 script.
   $(function() {
   $('#header').load('header.html');
-  $('#navbar').load('navbar.html');
+  $('#navbar').load('navbar.html', '', function() { 
+    $('.nav li#navindex').addClass('active') 
+  });
   $('#footer').load('footer.html');
   });
 
@@ -45,18 +47,20 @@ div
     span.glyphicon.glyphicon-search
     | &nbsp;What is SEEK?
   .row
-    .col-md-6
-      p
+    .col-md-2
+    .col-md-4.col-sm-6
+      p.text-justify
         | SEEK is an annual competition hosted by Robotics for Space Exploration (RSX). Competitors are given a task, 
         | some robotic components to design and build a robot to complete a series of challenges. SEEK was first held 
         | in 2015 as a way of getting more people interested and active in robotics. We'd have to say we've been pretty successful! 
       br
-    .col-md-6
-      p.text-center
-        img.body-image(src='./assets/images/logo2016_transparent.png')
+    .col-sm-6
+      p.text-center.text-center
+        img#logo(src='./assets/images/logo2016_transparent.png')
 br
 h1.text-center
-  span.glyphicon.glyphicon-asterisk
+  span.glyphicon.glyphicon-chevron-left
+  span.glyphicon.glyphicon-chevron-right
 br 
 br
 
@@ -78,33 +82,47 @@ br
         | Our goal is to make a self-contained event, so we will give you all of the materials you need. Best of all,
         | you keep all of your parts afterwards for your future robotic projects!
       p.text-center
-        a.btn.btn-default(href='materials.html', role='button') Material List &raquo;
+        a.btn.btn-default(href='materials.html', role='button') Materials &raquo;
     .col-sm-4
       h3.text-center Compete!
       p.text-justify
         | After several hours, you'll participate in a tournament, where you test your robot head-to-head with
         | your competitors' and compete for awesome prizes. Good luck!
       p.text-center
-        a.btn.btn-default(href='#', role='button') Competition Schedule &raquo;
+        a.btn.btn-default(href='schedule.html', role='button') Schedule &raquo;
 br        
 h1.text-center
-  span.glyphicon.glyphicon-asterisk
+  span.glyphicon.glyphicon-chevron-left
+  span.glyphicon.glyphicon-chevron-right
 br 
 br
 
-section#sponsors 
-  .container
-    .row
-      .col-md-6
-  // RSX, other sponsors
-        h2 About RSX
-        p
-          | RSX (Robotics for Space Exploration) was founded in 2013 to represent the University of Toronto at the University Rover Challenge. 
-          | Since then, we've added a couple more projects: Cansat, which develops a rocket payload, and a High Altitude Balloon, 
-          | that takes sensor readings of the atmosphere. As a relatively new club, we pride ourselves on our openness to new members 
-          | regardless of skill or experience. If you're interested, feel free to join! 
-            a(href='http://rsx-utoronto.com') 
-        .col-md-6
+.container#sponsors 
+  h1.text-center.well
+    span.glyphicon.glyphicon-list
+    | &nbsp;Sponsors
+  .row
+    a(href='http://www.archersarena.com').col-md-4.text-right
+      img#logo(src='http://static1.squarespace.com/static/55334389e4b0fcb142f0f867/t/572ba95f356fb09fb11dcf27/1465373273754/?format=1500w')
+    .col-md-8
+      p <strong> Archer's Arena </strong> was founded by U of T alumni, and kindly donated tickets, some of the prizes for SEEK 2016. 
+  br
+  .row
+    a(href='https://www.facebook.com/TorontoPopcornCompany/').col-md-4.text-right
+      img#logo(src='https://scontent.fsnc1-1.fna.fbcdn.net/v/t1.0-9/15430_1494266787514091_1446696684705799791_n.png?oh=8d5ff285dfbc41168e4f63ec82ca7b97&oe=57F91520')
+    .col-md-8
+      p <strong> Toronto Popcorn Company </strong> generously donated amazing popcorn for SEEK 2016.
+  br
+  .row
+    a(href='http://rsx-utoronto.com').col-md-4.text-right
+        img#logo(src='https://pbs.twimg.com/profile_images/412622449784532992/fLLGNXb-.png')
+    .col-md-8
+      p
+        | <strong> RSX (Robotics for Space Exploration) </strong>  was founded in 2013 to represent the University of Toronto 
+        | at the University Rover Challenge. Since then, we've added a couple more projects: Cansat, which develops 
+        | a rocket payload, and a High Altitude Balloon, that takes sensor readings of the atmosphere. As a
+        | relatively new club, we pride ourselves on our openness to new members regardless of skill or experience. 
+        | If you're interested robotics and space, feel free to join us! 
 
 
 .container#faqs
@@ -122,7 +140,8 @@ section#sponsors
 
 br
 h1.text-center
-  span.glyphicon.glyphicon-asterisk
+  span.glyphicon.glyphicon-chevron-left
+  span.glyphicon.glyphicon-chevron-right
 br 
 br
 
@@ -153,6 +172,4 @@ h1.text-center
 br 
 br
 
-script.
-  $('nav li#index').setClass('active')
 #footer

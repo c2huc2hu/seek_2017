@@ -7,7 +7,9 @@ script.
 script.
   $(function() {
   $('#header').load('header.html');
-  $('#navbar').load('navbar.html');
+  $('#navbar').load('navbar.html', '', function() { 
+    $('.nav li#navpastyears').addClass('active') 
+  });
   $('#footer').load('footer.html');
   });
 
@@ -27,7 +29,7 @@ div
   .row
     .col-sm-6.text-right
       img.body-image(src='./assets/images/seek_winners_2016.jpg')
-    .col-sm-6
+    .col-md-4.col-sm-6.text-justify
       p
       | For SEEK 2016, we ramped up the difficulty by introducing three sub-tasks
       | to stop the Martian invasion. Our winners, "Wow I Thought", beat out the 
@@ -35,7 +37,8 @@ div
       | to all of the sponsors, participants and volunteers! 
 br
 h1.text-center
-  span.glyphicon.glyphicon-asterisk
+  span.glyphicon.glyphicon-chevron-left
+  span.glyphicon.glyphicon-chevron-right
 br 
 br
 
@@ -44,7 +47,7 @@ br
     span.glyphicon.glyphicon-pawn
     | &nbsp;SEEK 2015
   .row
-    .col-sm-6.text-right
+    .col-md-4.col-md-offset-2.col-sm-6.text-justify
       p
       | The winner of the inaugural SEEK was Cheesecake Squad! They defeated
       | fifteen other robots in head-to-head matches, collecting the most blocks of 
@@ -60,3 +63,5 @@ br
 br
 
 #footer
+script.
+  $(); 
