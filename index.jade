@@ -1,138 +1,118 @@
-doctype html
+title  SEEK 2017 | Space Exploration and Engineering Kompetition
 
-// Include jQuery
-script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
-script.
-  window.jQuery || document.write('<script src="./assets/js/jquery.min.js"><\\/script>')
-script.
-  $(function() {
-  $('#header').load('header.html');
-  $('#navbar').load('navbar.html', '', function() { 
-    $('.nav li#navindex').addClass('active') 
-  });
-  $('#footer').load('footer.html');
-  });
+include partials/header.html
+include partials/navbar.html
+script(src='scripts/xor.js')
 
-title  SEEK 2017 | Space Exploration and Engineering Kompetition 
+#topcarousel.carousel.slide(data-ride="carousel")
+  .overlay
+    h1 Space Exploration &amp; Engineering Kompetition
+  ol.carousel-indicators
+    li.active(data-target='#topcarousel', data-slide-to='0')
+    li(data-target='#topcarousel', data-slide-to='1')
+    li(data-target='#topcarousel', data-slide-to='2')
 
-#header  
-#navbar 
+  .carousel-inner(role='listbox')
+    .item.active
+      img(src='./assets/images/arena.jpg')
+    .item
+      img(src='./assets/images/robot_display.jpg')
+    .item
+      img(src='./assets/images/robots_are_cute.jpg')
 
-div
-  #topcarousel.carousel.slide(data-ride="carousel")
-    .overlay
-      h1 Space Exploration &amp; Engineering Kompetition
-    ol.carousel-indicators
-      li.active(data-target='#topcarousel', data-slide-to='0')
-      li(data-target='#topcarousel', data-slide-to='1')
-      li(data-target='#topcarousel', data-slide-to='2')
+  a.left.carousel-control(href='#topcarousel', role='button', data-slide='prev')
+    span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
+    span.sr-only Previous
+  a.right.carousel-control(href='#topcarousel', role='button', data-slide='next')
+    span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
+    span.sr-only Next
 
-    .carousel-inner(role='listbox')
-      .item.active
-        img(src='./assets/images/arena.jpg')
-      .item
-        img(src='./assets/images/robot_display.jpg')
-      .item
-        img(src='./assets/images/robots_are_cute.jpg')
-
-    a.left.carousel-control(href='#topcarousel', role='button', data-slide='prev')
-      span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
-      span.sr-only Previous
-    a.right.carousel-control(href='#topcarousel', role='button', data-slide='next')
-      span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
-      span.sr-only Next
-
-.container#whatisseek
+.container.section-anchor#whatisseek
   h1.text-center.well
     span.glyphicon.glyphicon-search
     | &nbsp;What is SEEK?
   .row
-    .col-md-2
-    .col-md-4.col-sm-6
-      p.text-justify
-        | SEEK is an annual competition hosted by Robotics for Space Exploration (RSX). Competitors are given a task, 
-        | some robotic components to design and build a robot to complete a series of challenges. SEEK was first held 
-        | in 2015 as a way of getting more people interested and active in robotics. We'd have to say we've been pretty successful! 
-      br
+    .col-md-1
+    .col-md-5.col-sm-6
+      p.text-left
+        | SEEK is an annual competition hosted by Robotics for Space Exploration (RSX). Competitors are given a task,
+        | some robotic components to design and build a robot that can complete a series of challenges. SEEK was first held
+        | in 2015 as a way of getting more people interested and active in robotics. We'd have to say we've been pretty successful!
     .col-sm-6
-      p.text-center.text-center
-        img#logo(src='./assets/images/logo2016_transparent.png')
+      iframe(src="https://www.youtube.com/embed/0-UED13FOFk")
+
 br
 h1.text-center
-  span.glyphicon.glyphicon-chevron-left
-  span.glyphicon.glyphicon-chevron-right
-br 
-br
+  span.glyphicon.glyphicon-triangle-left
+  span.glyphicon.glyphicon-triangle-right
 
-.container#info
+.container.section-anchor#info
   h1.text-center.well
     span.glyphicon.glyphicon-list
     | &nbsp;Info
   .row
     .col-sm-4
       h3.text-center Learn ...
-      p.text-justify
+      p
         | SEEK is designed to provide an introduction to people new to robotics, while still being a challenge to
         | those with more experience. We also run tutorials prior to the event, to which anyone is welcome!
       p.text-center
         a.btn.btn-default(href='https://drive.google.com/drive/u/0/folders/0B16QfDEQuaGrWUNoWkFwZXdnenc', role='button') Tutorials &raquo;
     .col-sm-4
       h3.text-center Build ...
-      p.text.justify
+      p
         | Our goal is to make a self-contained event, so we will give you all of the materials you need. Best of all,
         | you keep all of your parts afterwards for your future robotic projects!
       p.text-center
         a.btn.btn-default(href='materials.html', role='button') Materials &raquo;
     .col-sm-4
       h3.text-center Compete!
-      p.text-justify
+      p
         | After several hours, you'll participate in a tournament, where you test your robot head-to-head with
         | your competitors' and compete for awesome prizes. Good luck!
       p.text-center
         a.btn.btn-default(href='schedule.html', role='button') Schedule &raquo;
-br        
-h1.text-center
-  span.glyphicon.glyphicon-chevron-left
-  span.glyphicon.glyphicon-chevron-right
-br 
 br
+h1.text-center
+  span.glyphicon.glyphicon-triangle-left
+  span.glyphicon.glyphicon-triangle-right
 
-.container#sponsors 
+.container.section-anchor#sponsors
   h1.text-center.well
-    span.glyphicon.glyphicon-list
+    span.glyphicon.glyphicon-thumbs-up
     | &nbsp;Sponsors
   .row
     a(href='http://www.archersarena.com').col-md-4.text-right
       img#logo(src='http://static1.squarespace.com/static/55334389e4b0fcb142f0f867/t/572ba95f356fb09fb11dcf27/1465373273754/?format=1500w')
     .col-md-8
-      p <strong> Archer's Arena </strong> was founded by U of T alumni, and kindly donated tickets, some of the prizes for SEEK 2016. 
+      p <strong> Archer's Arena </strong> was founded by U of T alumni, and kindly donated tickets, some of the prizes for SEEK 2016!
   br
   .row
     a(href='https://www.facebook.com/TorontoPopcornCompany/').col-md-4.text-right
       img#logo(src='https://scontent.fsnc1-1.fna.fbcdn.net/v/t1.0-9/15430_1494266787514091_1446696684705799791_n.png?oh=8d5ff285dfbc41168e4f63ec82ca7b97&oe=57F91520')
     .col-md-8
-      p <strong> Toronto Popcorn Company </strong> generously donated amazing popcorn for SEEK 2016.
+      p <strong> Toronto Popcorn Company </strong> generously donated amazing popcorn for SEEK 2016!
   br
   .row
     a(href='http://rsx-utoronto.com').col-md-4.text-right
         img#logo(src='https://pbs.twimg.com/profile_images/412622449784532992/fLLGNXb-.png')
     .col-md-8
       p
-        | <strong> RSX (Robotics for Space Exploration) </strong>  was founded in 2013 to represent the University of Toronto 
-        | at the University Rover Challenge. Since then, we've added a couple more projects: Cansat, which develops 
+        | <strong> RSX (Robotics for Space Exploration) </strong>  was founded in 2013 to represent the University of Toronto
+        | at the University Rover Challenge. Since then, we've added a couple more projects: Cansat, which develops
         | a rocket payload, and a High Altitude Balloon, that takes sensor readings of the atmosphere. As a
-        | relatively new club, we pride ourselves on our openness to new members regardless of skill or experience. 
-        | If you're interested robotics and space, feel free to join us! 
+        | relatively new club, we pride ourselves on our openness to new members regardless of skill or experience.
+        | If you're interested robotics and space, feel free to join us!
 
 
-.container#faqs
+.container.section-anchor#faqs
   h1.text-center.well
     span.glyphicon.glyphicon-question-sign
     | &nbsp;FAQs
   .container
     .row
       .col-sm-6
-        h3 What should I bring to the competition? 
+        h3 What should I bring to the competition?
         p Bring a laptop, a charger and a smartphone, we'll provide the rest: snacks, lunch and components
       .col-sm-6
         h3 Can I use materials other than what we were given?
@@ -140,36 +120,31 @@ br
 
 br
 h1.text-center
-  span.glyphicon.glyphicon-chevron-left
-  span.glyphicon.glyphicon-chevron-right
-br 
+  span.glyphicon.glyphicon-triangle-left
+  span.glyphicon.glyphicon-triangle-right
 br
 
-.container#contact
-  h1.text-center.well 
+.container.section-anchor#contact
+  h1.text-center.well
     span.glyphicon.glyphicon-send
     | &nbsp;Questions?
   .container
-    h3 General questions 
-    p
-      | Reach us at:  
-      script.
-        // email address is xor encoded with the key "seek"
-        function xor(key, msg) {
-          r=[];
-          for(var i=0;i<msg.length;i++)
-            r.push(key.charCodeAt(i % key.length) ^ msg[i]);     
-          return String.fromCharCode.apply(0, r)
-        }
-        m=[16, 1, 75, 8, 27, 16, 37, 6, 18, 12, 9, 69, 6, 17, 10, 25, 28, 11, 17, 4, 93, 6, 4]
-        document.write('<a href="mailto:' + xor("seek", m) + '?subject=[SEEK]:  "> ' + xor("seek", m) + '</a>')
+    row
+      .col-sm-6.text-center
+        h3 General Questions
+        script.
+          chris=[16, 1, 75, 8, 27, 16, 37, 6, 18, 12, 9, 69, 6, 17, 10, 25, 28, 11, 17, 4, 93, 6, 4]
+          document.write('<a href="mailto:' + xor("seek", chris) + '?subject=[SEEK]:  "> ' + xor("seek", chris) + '</a>')
+      .col-sm-6.text-center
+        h3 Sponsorship Information
+        script.
+          gabe=[18, 23, 21, 2, 29, 10, 75, 12, 18, 7, 23, 2, 22, 9, 37, 12, 30, 4, 12, 7, 93, 6, 10, 6]
+          document.write('<a href="mailto:' + xor("seek", gabe) + '?subject=[SEEK]:  "> ' + xor("seek", gabe) + '</a>')
     // todo: reserve a better email address
     // a(href="mailto:")
       | Sponsorship
-br
-h1.text-center
-  span.glyphicon.glyphicon-stop
-br 
-br
 
-#footer
+include partials/footer.html
+script.
+  $('#navindex').addClass('active')
+  $('.navbar-index').removeClass('hidden')

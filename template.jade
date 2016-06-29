@@ -1,21 +1,10 @@
-doctype html 
+doctype html
 
-// Include jQuery
-script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
-script.
-  window.jQuery || document.write('<script src="./assets/js/jquery.min.js"><\\/script>')
-script.
-  $(function() {
-  $('#header').load('header.html');
-  $('#navbar').load('navbar.html');
-  $('#footer').load('footer.html');
-  });
-
-title ABC TITLE 
+title ABC TITLE
 // changem e
 
-#header
-#navbar
+include partials/header.html
+include partials/navbar.html
 
 div
   h1.jumbotron &nbsp;
@@ -27,19 +16,14 @@ div
     | &nbsp;Title 1
 br
 h1.text-center
-  span.glyphicon.glyphicon-chevron-left
-  span.glyphicon.glyphicon-chevron-right
-br 
+  span.glyphicon.glyphicon-triangle-left
+  span.glyphicon.glyphicon-triangle-right
+br
 br
 
 .container#id2
   h1.text-center.well
     span.glyphicon.glyphicon-pawn
     | &nbsp;Title 2
-br
-h1.text-center
-  span.glyphicon.glyphicon-stop
-br 
-br
 
-#footer
+include partials/footer.html

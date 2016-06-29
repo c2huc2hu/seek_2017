@@ -1,20 +1,7 @@
-doctype html 
-
-// Include jQuery
-script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
-script.
-  window.jQuery || document.write('<script src="./assets/js/jquery.min.js"><\\/script>')
-script.
-  $(function() {
-  $('#header').load('header.html');
-  $('#navbar').load('navbar.html');
-  $('#footer').load('footer.html');
-  });
-
 title Schedule
 
-#header
-#navbar
+include partials/header.html
+include partials/navbar.html
 
 div
   h1.jumbotron &nbsp;
@@ -25,10 +12,5 @@ div
     span.glyphicon.glyphicon-calendar
     | &nbsp;Schedule
   h3 Coming soon!
-br
-//h1.text-center
-  span.glyphicon.glyphicon-stop
-br 
-br
 
-#footer
+include partials/footer.html
