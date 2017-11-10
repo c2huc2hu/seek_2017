@@ -3,6 +3,27 @@ img.body-image {
 	width: 100%;
 }
 
+p {
+	font-size: 20px;
+	padding: 20px;
+}
+
+h1.primary {
+	background-color: peru;
+	padding: 10px 15px;
+	border-radius: 5px;
+}
+
+h1.primary .glyphicon {
+	top: 4px;
+}
+
+h3.secondary {
+	background-color: wheat;
+	padding: 5px 7px;
+	border-radius: 3px;
+}
+
 /* Carousel */
 #topcarousel {
 	padding-top: 40px;
@@ -55,7 +76,15 @@ img#logo {
 	width: 25%;
 }
 
+iframe {
+	display: block;
+	margin: auto;
+}
+
 /* Info */
+#info, #faqs {
+	background-color: cornsilk;
+}
 #info row p {
 	text-align: center;
 }

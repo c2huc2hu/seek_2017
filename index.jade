@@ -27,58 +27,51 @@ script(src='scripts/xor.js')
     span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
     span.sr-only Next
 
-.container.section-anchor#whatisseek
-  h1.text-center.well
+.container#whatisseek
+  h1.primary
     span.glyphicon.glyphicon-search
     | &nbsp;What is SEEK?
-  .row
-    .col-md-1
-    .col-md-5.col-sm-6
-      p.text-left
-        | SEEK is an annual competition hosted by Robotics for Space Exploration (RSX). Competitors are given a task,
-        | some robotic components to design and build a robot that can complete a series of challenges. SEEK was first held
-        | in 2015 as a way of getting more people interested and active in robotics. We'd have to say we've been pretty successful!
-    .col-sm-6
-      iframe(src="https://www.youtube.com/embed/0-UED13FOFk")
+
+  p.text-left
+    | SEEK is an annual competition hosted by Robotics for Space Exploration (RSX). Competitors are given a task,
+    | some robotic components to design and build a robot that can complete a series of challenges. SEEK was first held
+    | in 2015 as a way of getting more people interested and active in robotics. We'd have to say we've been pretty successful!
+
+
+  iframe(width=640, height=360, src="https://www.youtube.com/embed/0-UED13FOFk", allowfullscreen)
 
 br
-h1.text-center
-  span.glyphicon.glyphicon-triangle-left
-  span.glyphicon.glyphicon-triangle-right
 
-.container.section-anchor#info
-  h1.text-center.well
+.container#info
+  h1.primary
     span.glyphicon.glyphicon-list
     | &nbsp;Info
   .row
     .col-sm-4
-      h3.text-center Learn ...
+      h3.secondary.text-center Learn ...
       p
         | SEEK is designed to provide an introduction to people new to robotics, while still being a challenge to
         | those with more experience. We also run tutorials prior to the event, to which anyone is welcome!
       p.text-center
         a.btn.btn-default(href='https://drive.google.com/drive/u/0/folders/0B16QfDEQuaGrWUNoWkFwZXdnenc', role='button') Tutorials &raquo;
     .col-sm-4
-      h3.text-center Build ...
+      h3.secondary.text-center Build ...
       p
         | Our goal is to make a self-contained event, so we will give you all of the materials you need. Best of all,
         | you keep all of your parts afterwards for your future robotic projects!
       p.text-center
         a.btn.btn-default(href='materials.html', role='button') Materials &raquo;
     .col-sm-4
-      h3.text-center Compete!
+      h3.secondary.text-center Compete!
       p
         | After several hours, you'll participate in a tournament, where you test your robot head-to-head with
         | your competitors' and compete for awesome prizes. Good luck!
       p.text-center
         a.btn.btn-default(href='schedule.html', role='button') Schedule &raquo;
 br
-h1.text-center
-  span.glyphicon.glyphicon-triangle-left
-  span.glyphicon.glyphicon-triangle-right
 
-.container.section-anchor#sponsors
-  h1.text-center.well
+.container#sponsors
+  h1.primary
     span.glyphicon.glyphicon-thumbs-up
     | &nbsp;Sponsors
   .row
@@ -89,7 +82,6 @@ h1.text-center
   br
   .row
     a(href='https://www.facebook.com/TorontoPopcornCompany/').col-md-4.text-right
-      img#logo(src='https://scontent.fsnc1-1.fna.fbcdn.net/v/t1.0-9/15430_1494266787514091_1446696684705799791_n.png?oh=8d5ff285dfbc41168e4f63ec82ca7b97&oe=57F91520')
     .col-md-8
       p <strong> Toronto Popcorn Company </strong> generously donated amazing popcorn for SEEK 2016!
   br
@@ -105,44 +97,30 @@ h1.text-center
         | If you're interested robotics and space, feel free to join us!
 
 
-.container.section-anchor#faqs
-  h1.text-center.well
+.container#faqs
+  h1.primary
     span.glyphicon.glyphicon-question-sign
     | &nbsp;FAQs
-  .container
-    .row
-      .col-sm-6
-        h3 What should I bring to the competition?
-        p Bring a laptop, a charger and a smartphone, we'll provide the rest: snacks, lunch and components
-      .col-sm-6
-        h3 Can I use materials other than what we were given?
-        p You may bring tools, but not materials. Anything extra cannot be used on the robot
+  .row
+    .col-sm-6
+      h3.secondary What should I bring to the competition?
+      p Bring a laptop, a charger and a smartphone, we'll provide the rest: snacks, lunch and components
+    .col-sm-6
+      h3.secondary Can I use materials other than what we were given?
+      p You may bring tools, but not materials. Anything extra cannot be used on the robot
 
 br
-h1.text-center
-  span.glyphicon.glyphicon-triangle-left
-  span.glyphicon.glyphicon-triangle-right
-br
 
-.container.section-anchor#contact
+.container#contact
   h1.text-center.well
     span.glyphicon.glyphicon-send
     | &nbsp;Questions?
-  .container
-    row
-      .col-sm-6.text-center
-        h3 General Questions
+  .row
+    .text-center
+      p For any questions about registration, logistics or sponsorship, feel free to reach out to Rex at:
         script.
-          chris=[16, 1, 75, 8, 27, 16, 37, 6, 18, 12, 9, 69, 6, 17, 10, 25, 28, 11, 17, 4, 93, 6, 4]
-          document.write('<a href="mailto:' + xor("seek", chris) + '?subject=[SEEK]:  "> ' + xor("seek", chris) + '</a>')
-      .col-sm-6.text-center
-        h3 Sponsorship Information
-        script.
-          gabe=[18, 23, 21, 2, 29, 10, 75, 12, 18, 7, 23, 2, 22, 9, 37, 12, 30, 4, 12, 7, 93, 6, 10, 6]
-          document.write('<a href="mailto:' + xor("seek", gabe) + '?subject=[SEEK]:  "> ' + xor("seek", gabe) + '</a>')
-    // todo: reserve a better email address
-    // a(href="mailto:")
-      | Sponsorship
+          rex=[1, 0, 29, 69, 30, 4, 37, 6, 18, 12, 9, 69, 6, 17, 10, 25, 28, 11, 17, 4, 93, 6, 4]
+          document.write('<a href="mailto:' + xor("seek", rex) + '?subject=[SEEK]:  "> ' + xor("seek", rex) + '</a>')
 
 include partials/footer.html
 script.
