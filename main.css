@@ -9,7 +9,7 @@ p {
 }
 
 h1.primary {
-	background-color: peru;
+	background-color: #f97a05;
 	padding: 10px 15px;
 	border-radius: 5px;
 }
@@ -19,15 +19,17 @@ h1.primary .glyphicon {
 }
 
 h3.secondary {
-	background-color: wheat;
-	padding: 5px 7px;
-	border-radius: 3px;
+	background-color: #fdbf01;
+	padding: 5px 10px;
+	border-radius: 5px;
 }
 
 /* Carousel */
 #topcarousel {
 	padding-top: 40px;
 	background-color: black;
+	max-height: 100%;
+	overflow: hidden;
 }
 
 .overlay {
@@ -67,11 +69,17 @@ h3.secondary {
 	opacity: 0.5;
 }
 
-/* ==Index page== */
-.section-anchor {
-	padding-top: 40px; /* Because navbar */
+.btn-primary {
+	background-color: #fdbf01;
+	border: 0 solid;
 }
 
+.btn-primary:hover {
+	background-color: #fdbf01;
+	color: black;
+}
+
+/* ==Index page== */
 img#logo {
 	width: 25%;
 }
@@ -82,11 +90,25 @@ iframe {
 }
 
 /* Info */
-#info, #faqs {
+#whatisseek, #info, #sponsors, #faqs, #contact, #register {
+	margin: 20px auto;
+	padding-top: 20px;
 	background-color: cornsilk;
 }
-#info row p {
-	text-align: center;
+
+#register .row p {
+	padding: 10px 0;
+}
+
+.row .col-sm-4 {
+	display: flex;
+	flex-direction: column;
+}
+
+.row .col-sm-4 .info-text {
+	flex-grow: 1;
+	padding-bottom: 0;
+	margin-bottom: 0;
 }
 
 /* == Materials Page == */
@@ -106,14 +128,15 @@ iframe {
 }
 
 /* == Navbar == */
-.navbar-inverse .navbar-brand{
-	background-color: peru;
-	color: whitesmoke;
+
+.navbar {
+	background-color: #b53b03;
 }
 
-.nav-subpage > a:before{
-	content: '→ ';
+.navbar-brand, .nav-link {
+	color: white;
 }
-.nav-subpage > a:hover {
-	color: #bbb !important;
+
+.navbar-brand:hover, .nav-link:hover {
+	color: black;
 }

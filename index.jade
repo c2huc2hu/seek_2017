@@ -13,24 +13,23 @@ script(src='scripts/xor.js')
     li(data-target='#topcarousel', data-slide-to='2')
 
   .carousel-inner(role='listbox')
-    .item.active
+    .carousel-item.active
       img(src='./assets/images/arena.jpg')
-    .item
+    .carousel-item
       img(src='./assets/images/robot_display.jpg')
-    .item
+    .carousel-item
       img(src='./assets/images/robots_are_cute.jpg')
 
-  a.left.carousel-control(href='#topcarousel', role='button', data-slide='prev')
-    span.glyphicon.glyphicon-chevron-left(aria-hidden='true')
+  a.carousel-control-prev(href='#topcarousel', role='button', data-slide='prev')
+    span.carousel-control-prev-icon(aria-hidden='true')
     span.sr-only Previous
-  a.right.carousel-control(href='#topcarousel', role='button', data-slide='next')
-    span.glyphicon.glyphicon-chevron-right(aria-hidden='true')
+  a.carousel-control-next(href='#topcarousel', role='button', data-slide='next')
+    span.carousel-control-next-icon(aria-hidden='true')
     span.sr-only Next
 
 .container#whatisseek
   h1.primary
-    span.glyphicon.glyphicon-search
-    | &nbsp;What is SEEK?
+        | &nbsp;What is SEEK?
 
   p.text-left
     | SEEK is an annual competition hosted by Robotics for Space Exploration (RSX). Competitors are given a task,
@@ -40,51 +39,48 @@ script(src='scripts/xor.js')
 
   iframe(width=640, height=360, src="https://www.youtube.com/embed/0-UED13FOFk", allowfullscreen)
 
-br
-
 .container#info
   h1.primary
-    span.glyphicon.glyphicon-list
     | &nbsp;Info
   .row
     .col-sm-4
       h3.secondary.text-center Learn ...
-      p
+      p.info-text
         | SEEK is designed to provide an introduction to people new to robotics, while still being a challenge to
         | those with more experience. We also run tutorials prior to the event, to which anyone is welcome!
-      p.text-center
-        a.btn.btn-default(href='https://drive.google.com/drive/u/0/folders/0B16QfDEQuaGrWUNoWkFwZXdnenc', role='button') Tutorials &raquo;
+      p
+        a(href='https://drive.google.com/drive/u/0/folders/0B16QfDEQuaGrWUNoWkFwZXdnenc') Tutorials &raquo;
     .col-sm-4
       h3.secondary.text-center Build ...
+      p.info-text
+        | Our goal is to make a self-contained event, so we will give you all of the materials you need.
+        | Best of all, you keep all of your parts afterwards for your future robotic projects!
       p
-        | Our goal is to make a self-contained event, so we will give you all of the materials you need. Best of all,
-        | you keep all of your parts afterwards for your future robotic projects!
-      p.text-center
-        a.btn.btn-default(href='materials.html', role='button') Materials &raquo;
+        a(href='materials.html') List of parts &raquo;
+
     .col-sm-4
       h3.secondary.text-center Compete!
-      p
+      p.info-text
         | After several hours, you'll participate in a tournament, where you test your robot head-to-head with
         | your competitors' and compete for awesome prizes. Good luck!
-      p.text-center
-        a.btn.btn-default(href='schedule.html', role='button') Schedule &raquo;
-br
+      p
+        a(href='schedule.html') Schedule &raquo;
+
 
 .container#sponsors
   h1.primary
-    span.glyphicon.glyphicon-thumbs-up
     | &nbsp;Sponsors
   .row
     a(href='http://www.archersarena.com').col-md-4.text-right
       img#logo(src='http://static1.squarespace.com/static/55334389e4b0fcb142f0f867/t/572ba95f356fb09fb11dcf27/1465373273754/?format=1500w')
     .col-md-8
       p <strong> Archer's Arena </strong> was founded by U of T alumni, and kindly donated tickets, some of the prizes for SEEK 2016!
-  br
+
   .row
     a(href='https://www.facebook.com/TorontoPopcornCompany/').col-md-4.text-right
     .col-md-8
       p <strong> Toronto Popcorn Company </strong> generously donated amazing popcorn for SEEK 2016!
-  br
+
   .row
     a(href='http://rsx-utoronto.com').col-md-4.text-right
         img#logo(src='https://pbs.twimg.com/profile_images/412622449784532992/fLLGNXb-.png')
@@ -99,21 +95,17 @@ br
 
 .container#faqs
   h1.primary
-    span.glyphicon.glyphicon-question-sign
     | &nbsp;FAQs
   .row
     .col-sm-6
-      h3.secondary What should I bring to the competition?
+      h3.secondary What should I bring?
       p Bring a laptop, a charger and a smartphone, we'll provide the rest: snacks, lunch and components
     .col-sm-6
-      h3.secondary Can I use materials other than what we were given?
+      h3.secondary Can I use materials I bring?
       p You may bring tools, but not materials. Anything extra cannot be used on the robot
 
-br
-
 .container#contact
-  h1.text-center.well
-    span.glyphicon.glyphicon-send
+  h1.primary
     | &nbsp;Questions?
   .row
     .text-center

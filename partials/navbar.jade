@@ -1,14 +1,14 @@
-nav.navbar.navbar-inverse.navbar-fixed-top
+nav.navbar.sticky-top.navbar-expand-md
   .navbar-header
-    button.navbar-toggle(type='button', data-toggle='collapse', data-target='#mainnavbar')
+    button.navbar-toggler(type='button', data-toggle='collapse', data-target='#mainnavbar')
       span.icon-bar
       span.icon-bar
       span.icon-bar
     a.navbar-brand(href='./') SEEK 2017
   #mainnavbar.collapse.navbar-collapse
-    ul.nav.navbar-nav
-      li#navindex
-        a(href='./') Home
+    ul.navbar-nav
+      li.nav-item#navindex
+        a.nav-link(href='./') Home
       //- li.navbar-index.nav-subpage.hidden
       //-   a(href='#whatisseek') What is SEEK?
       //- li.navbar-index.nav-subpage.hidden
@@ -18,14 +18,14 @@ nav.navbar.navbar-inverse.navbar-fixed-top
       //- li.navbar-index.nav-subpage.hidden
       //-   a(href='#faqs') FAQs
 
-      li#navregister
-        a(href='register.html') Register
+      li.nav-item#navregister
+        a.nav-link(href='register.html') Register
 
-      li#navpastyears
-        a(href='past-years.html') Past years
+      li.nav-item#navpastyears
+        a.nav-link(href='past-years.html') Past years
       //- li.navbar-pastyears.nav-subpage.hidden
       //-   a(href='#seek2016') 2016
       //- li.navbar-pastyears.nav-subpage.hidden
       //-   a(href='#seek2015') 2015
-      li#contactus
-        a(href='contact.html') Contact
+      li.nav-item#contactus
+        a.nav-link(href='contact.html') Contact

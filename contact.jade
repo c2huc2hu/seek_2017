@@ -8,18 +8,15 @@ script(src='scripts/xor.js')
 
 div
   h1.jumbotron &nbsp;
-  h1.jumbotron-head.container Contact Us&nbsp;
 
 .container.section-anchor#contact
-  h1.text-center.well
-    span.glyphicon.glyphicon-send
-    | &nbsp;Get in Touch!
+  h1.primary
+    | Get in Touch!
   .container
     row
-      .text-center
-        h3 General Questions
-        script.
-          rex=[1, 0, 29, 69, 30, 4, 37, 6, 18, 12, 9, 69, 6, 17, 10, 25, 28, 11, 17, 4, 93, 6, 4]
-          document.write('<a href="mailto:' + xor("seek", rex) + '?subject=[SEEK]:  "> ' + xor("seek", rex) + '</a>')
+        p Send general questions to
+          script.
+            rex=[1, 0, 29, 69, 30, 4, 37, 6, 18, 12, 9, 69, 6, 17, 10, 25, 28, 11, 17, 4, 93, 6, 4]
+            document.write('<a href="mailto:' + xor("seek", rex) + '?subject=[SEEK]:  "> ' + xor("seek", rex) + '</a>')
 
 include partials/footer.html

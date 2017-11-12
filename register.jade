@@ -7,23 +7,24 @@ include ./partials/header.html
 include ./partials/navbar.html
 
 div
-  h1.jumbotron &nbsp;
-  h1.jumbotron-head.container Register
+  h1.jumbotron
 
-.container#id
-  h1.text-center.well
-    span.glyphicon.glyphicon-edit
-    | &nbsp;Registration
-  h3 Registration isn't open yet, but join our mailing list for updates!
-br
-h1.text-center
-  span.glyphicon.glyphicon-triangle-left
-  span.glyphicon.glyphicon-triangle-right
-br
-br
+.container#register
+  h1.primary Register
 
-.container.text-center
-  iframe(src='https://docs.google.com/forms/d/1pAnyqFfRYyzECg_6py3JoPwTiPM6Dh8biyEdxLW5Dpw/viewform?embedded=true', width='760', height='500', frameborder='0', marginheight='0', marginwidth='0') Loading...
+  .row
+    .col-sm-4
+      p.info-text Registration for SEEK is open!
+      p
+        a.btn.btn-primary(href="https://docs.google.com/forms/d/1dOvr2bTVxkSaiQsrpCE5zrCeeN_pTTO_LNoXQOLxYLE/edit?usp=drive_web") Register here
+
+    .col-sm-4
+      p.info-text Registration for SEEK Training sessions is open!
+      p
+        a.btn.btn-primary(href="https://docs.google.com/forms/d/1dOvr2bTVxkSaiQsrpCE5zrCeeN_pTTO_LNoXQOLxYLE/edit?usp=drive_web") Register here
+
+    .col-sm-4
+      p Registration for SEEK Jr. is not open; send us an email if you'd like to keep in touch!
 
 include ./partials/footer.html
 script.
