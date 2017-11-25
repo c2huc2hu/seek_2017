@@ -7,10 +7,28 @@ div
   h1.jumbotron &nbsp;
   h1.jumbotron-head.container Schedule
 
-.container#id
-  h1.text-center.well
-    span.glyphicon.glyphicon-calendar
-    | &nbsp;Schedule
-  h3 Coming soon!
+.container#schedule
+  h1.primary Schedule
+
+  .row
+    .col-sm-12.pb-2
+      table.table
+        thead
+          tr
+            th Item
+            th Time
+        tbody
+          tr
+            td Introduction
+            td 0930 - 1000
+          tr
+            td Build!
+            td 1000 - 1700
+          tr
+            td Working lunch
+            td 1200 - 1300
+          tr
+            td Competition time
+            td 1700 - 1800 (finals may run a bit late)
 
 include partials/footer.html
